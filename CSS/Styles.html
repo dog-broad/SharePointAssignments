@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+        h1 {
+            color: red;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--The following text is Red as the internal style is overriding the external style-->
+    <h1 style="background-color: yellow">All header 1 elements will be red</h1>
+    <h2>All header 2 elements will be blue</h2>
+    <p>All text in paragraphs will be green.</p>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <h1 style="color: blueviolet">All header 1 elements will be red excpet this as is it is overwritten by inline style</h1>
+    <h2>All header 2 elements will be blue</h2>
+    <p>All text in paragraphs will be green.</p>
+
+</body>
+
+</html>
