@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Div Content Toggle</title>
+</head>
+
+<body>
+
+    <!-- Content visible if JavaScript is disabled -->
+    <div id="myDiv" onclick="handleClick()">This is static content without JavaScript.</div>
+
+    <script>
+        // Replace content when JS runs
+        const div = document.getElementById("myDiv");
+        div.textContent = "JavaScript has modified this text. Click me!";
+
+        // Function called on click
+        function handleClick() {
+            div.textContent = "You clicked the div! Content changed again.";
+        }
+    </script>
+
+</body>
+
+</html>
