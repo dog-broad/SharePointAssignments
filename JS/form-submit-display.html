@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us Form</title>
+</head>
+
+<body>
+
+    <form name="contactusForm" onsubmit="return handleSubmit(event)">
+        <table>
+            <tr>
+                <td>Emp id #:</td>
+                <td><input type="text" name="idTxt" size="65" value=""></td>
+            </tr>
+            <tr>
+                <td>First name:</td>
+                <td><input type="text" name="fnameTxt" size="75" value=""></td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td><input type="text" name="lnameTxt" size="75" value=""></td>
+            </tr>
+            <tr>
+                <td>Dept no #:</td>
+                <td><input type="text" name="depTxt" size="35" value=""></td>
+            </tr>
+            <tr>
+                <td>Start Date #:</td>
+                <td><input type="text" name="startDateTxt" size="35" value=""></td>
+            </tr>
+            <tr>
+                <td>Salary #:</td>
+                <td><input type="text" name="salaryTxt" size="35" value=""></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Field:</td>
+                <td>
+                    <input type="checkbox" name="field" value="IMS"> IMS
+                    <input type="checkbox" name="field" value="BFS"> BFS
+                </td>
+            </tr>
+            <tr>
+                <td>Question?/Comment:</td>
+                <td><textarea name="queryText" cols="40" rows="7"></textarea></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pwd" value=""></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="cpwd" value=""></td>
+            </tr>
+            <tr>
+                <td>Upload Resume:</td>
+                <td><input type="file" name="resume" accept="file/*" size="3" /></td>
+            </tr>
+            <tr>
+                <td>Upload Image:</td>
+                <td><input type="file" name="photo" accept="image/*" /></td>
+            </tr>
+            <tr>
+                <td>Cars:</td>
+                <td>
+                    <select name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                        <option value="benz">Benz</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" name="rstBtn" value="Reset" />
+                    <input type="submit" name="submitBtn" value="Submit" />
+                    <input type="button" value="Need Help" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Stop actual form submission
+
+            const form = document.forms['contactusForm'];
+            const result = document.getElementById('result');
+
+            let gender = form.gender.value;
+
+            let fields = [];
+            form.querySelectorAll('input[name="field"]:checked').forEach(cb => {
+                fields.push(cb.value);
+            });
+
+            let output = `
+        <h3>Submitted Data:</h3>
+        <p><strong>Emp ID:</strong> ${form.idTxt.value}</p>
+        <p><strong>First Name:</strong> ${form.fnameTxt.value}</p>
+        <p><strong>Last Name:</strong> ${form.lnameTxt.value}</p>
+        <p><strong>Dept No:</strong> ${form.depTxt.value}</p>
+        <p><strong>Start Date:</strong> ${form.startDateTxt.value}</p>
+        <p><strong>Salary:</strong> ${form.salaryTxt.value}</p>
+        <p><strong>Gender:</strong> ${gender}</p>
+        <p><strong>Field(s):</strong> ${fields.join(', ')}</p>
+        <p><strong>Comment:</strong> ${form.queryText.value}</p>
+        <p><strong>Password:</strong> ${form.pwd.value}</p>
+        <p><strong>Confirm Password:</strong> ${form.cpwd.value}</p>
+        <p><strong>Selected Car:</strong> ${form.cars.value}</p>
+        <p><strong>Resume File:</strong> ${form.resume.files[0] ? form.resume.files[0].name : 'No file selected'}</p>
+        <p><strong>Photo File:</strong> ${form.photo.files[0] ? form.photo.files[0].name : 'No file selected'}</p>
+      `;
+
+            result.innerHTML = output;
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>
