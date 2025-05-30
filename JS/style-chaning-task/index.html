@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Employee Form</title>
+    <link id="styleSheet" rel="stylesheet" type="text/css" href="style1.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Employee Registration</h1>
+
+    <p>Choose a Style:</p>
+    <input type="radio" name="style" onclick="changeStyle(1)" checked> Style 1
+    <input type="radio" name="style" onclick="changeStyle(2)"> Style 2
+    <input type="radio" name="style" onclick="changeStyle(3)"> Style 3
+
+    <form name="contactusForm" method="get" action="First.html">
+        <table>
+            <tr>
+                <td>Emp ID:</td>
+                <td><input type="text" name="idTxt"></td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="fnameTxt"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lnameTxt"></td>
+            </tr>
+            <tr>
+                <td>Dept No:</td>
+                <td><input type="text" name="depTxt"></td>
+            </tr>
+            <tr>
+                <td>Start Date:</td>
+                <td><input type="text" name="startDateTxt"></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input type="text" name="salaryTxt"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Field:</td>
+                <td>
+                    <input type="checkbox" name="ims"> IMS
+                    <input type="checkbox" name="bfs"> BFS
+                </td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea name="queryText" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="cpwd"></td>
+            </tr>
+            <tr>
+                <td>Resume:</td>
+                <td><input type="file" name="resume"></td>
+            </tr>
+            <tr>
+                <td>Photo:</td>
+                <td><input type="file" name="photo"></td>
+            </tr>
+            <tr>
+                <td>Cars:</td>
+                <td>
+                    <select name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                        <option value="benz">Benz</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                    <input type="button" value="Need Help">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
