@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb Toggle</title>
+</head>
+
+<body>
+
+    <div>
+        <img id="bulb" src="pic_bulboff.gif" alt="Bulb" onclick="toggleBulb()">
+        <p>Click the bulb to toggle it on and off.</p>
+    </div>
+
+    <script>
+        function toggleBulb() {
+            var bulb = document.getElementById("bulb");
+            if (bulb.src.includes("pic_bulboff.gif")) {
+                bulb.src = "pic_bulbon.gif";
+            } else {
+                bulb.src = "pic_bulboff.gif";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
