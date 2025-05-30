@@ -1,0 +1,60 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #d2e8fc;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: whitesmoke;
+    border-radius: 18px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    border: 2px solid #ccc;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+}
+
+input, textarea, select {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 4px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
+
+.button-submit {
+    background-color: green;
+    color: white;
+}
+
+.button-reset {
+    background-color: red;
+    color: white;
+}
+
+.button-help {
+    background-color: blue;
+    color: white;
+}
+
+#output {
+    margin-top: 20px;
+    background-color: #f0ffff;
+    padding: 10px;
+}
