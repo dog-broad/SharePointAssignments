@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>The jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var pars = $("p");
+            for (var i = 0; i < pars.length; i++) {
+                alert("Found paragraph: " + pars[i].innerHTML);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+    <p>This is third paragraph.</p>
+</body>
+
+</html>
