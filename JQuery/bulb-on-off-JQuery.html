@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb Toggle</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#bulb').on('click', function () {
+                var bulbSrc = $(this).attr('src');
+                var newSrc = bulbSrc.includes('pic_bulboff.gif') ? '../IMAGES/GIFs/pic_bulbon.gif' : '../IMAGES/GIFs/pic_bulboff.gif';
+                $(this).attr('src', newSrc);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <img id="bulb" src="pic_bulboff.gif" alt="Bulb">
+        <p>Click the bulb to toggle it on and off.</p>
+    </div>
+</body>
+
+</html>
