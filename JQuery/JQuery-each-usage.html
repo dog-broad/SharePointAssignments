@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Each Usage Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var result = '';
+            $('li').each(function (index, element) {
+                result += 'Index = ' + index + ', Value = ' + $(element).text() + '<br>';
+            });
+            $('#resultDiv').html(result);
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>India</li>
+        <li>USA</li>
+        <li>UK</li>
+        <li>Canada</li>
+        <li>Australia</li>
+    </ul>
+    <div id="resultDiv"></div>
+</body>
+
+</html>
+
